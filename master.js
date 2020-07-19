@@ -30,6 +30,7 @@ calcular = () => {
         arregloBodega.forEach((element,index) => {
             if(largo > element[0] || ancho > element[1] || alto > element[2]){
                 var bodega = document.querySelector(`.bodega${index+1}`)
+                //este delete es para poder actualizar sin que se junte varias <p>
                 deleteChild(bodega);
                 // console.log(`No cabe en la bodega ${index+1}`)
                 var pbodega = document.createElement('p')
@@ -40,11 +41,9 @@ calcular = () => {
                 var bodega = document.querySelector(`.bodega${index+1}`);
                 deleteChild(bodega);
                 var pbodega = document.createElement('p')
-                pbodega.innerHTML = `Cabe en la bodega ${index+1} -> ${unidades}`
+                pbodega.innerHTML = `Cabe en la bodega ${index+1} -> Y caben ${unidades} unidades en la caja`
                 bodega.appendChild(pbodega)
-                let ele = parseFloat(element[0])-parseFloat(largo)
-                let num = ele.toFixed(2)
-                console.log(num == 0)
+                
             }
         });
     }
@@ -52,10 +51,10 @@ calcular = () => {
 
 
 calcularUnidades = (cajax, cajay, cajaz, dimx, dimy, dimz) =>  {
-    console.log(cajax, cajay, cajaz, dimx, dimy, dimz)
+    // console.log(cajax, cajay, cajaz, dimx, dimy, dimz)
     var opc1 = Math.floor(cajax / dimx) * Math.floor(cajay / dimy) * Math.floor(cajaz / dimz); 
-    var opc2 = Math.floor(cajax / dimx) * Math.floor(cajay / dimz) * Math.floor(cajaz / dimy);
-     numc = Math.max(opc1, opc2); 
+    // var opc2 = Math.floor(cajax / dimx) * Math.floor(cajay / dimz) * Math.floor(cajaz / dimy);
+     num = Math.max(opc1); 
    
 return num;
 }
