@@ -53,9 +53,9 @@ calcular = () => {
 
 calcularUnidades = (cajax, cajay, cajaz, dimx, dimy, dimz) =>  {
     console.log(cajax, cajay, cajaz, dimx, dimy, dimz)
-    var op1 = Math.floor(cajax / dimx) * Math.floor(cajay / dimy) * Math.floor(cajaz / dimz); 
-    var op2 = Math.floor(cajax / dimx) * Math.floor(cajay / dimz) * Math.floor(cajaz / dimy);
-     numc = Math.max(op1, op2); 
+    var opc1 = Math.floor(cajax / dimx) * Math.floor(cajay / dimy) * Math.floor(cajaz / dimz); 
+    var opc2 = Math.floor(cajax / dimx) * Math.floor(cajay / dimz) * Math.floor(cajaz / dimy);
+     numc = Math.max(opc1, opc2); 
    
-return numc;
+return num;
 }
